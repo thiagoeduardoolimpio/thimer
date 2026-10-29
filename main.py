@@ -1,24 +1,28 @@
 import tkinter as tk
-
+from tkinter import messagebox
+import timer_utils
 tempo_restante = 60
+timer_id = None
+  
+def iniciar():
+    global tempo_restante, timer_id
+    
+    # Cancela o timer anterior se existir
+    timer_utils.iniciar_timer(janela, timer_id)
+    
+    tempo_restante = 60
+    # Inicia a contagem passando os parâmetros
+    timer_id, tempo_restante = timer_utils.atualizar_tempo(texto, janela, tempo_restante)
 
-def iniciar_timer():
-    global tempo_restante
-    if tempo_restante > 0:
-        tempo_restante -= 1
-
-        texto.config(text=f"{tempo_restante:02d}")
-
-        janela.after(1000, iniciar_timer)
 
 janela = tk.Tk()
 janela.title("Thimer :p")
-janela.geometry("400x350")
+janela.geometry("180x160")
 
-texto = tk.Label(janela, text="00:00", font=("Arial", 40))
-texto.pack(paddy=20)
+texto = tk.Label(janela, text="60", font=("Arial", 40))
+texto.pack(pady=20)
 
-botao = tk.Button(janela, text="Iniciar")
+botao = tk.Button(janela, text="Inicio", command=iniciar)
 botao.pack()
 
 janela.mainloop()

@@ -1,0 +1,28 @@
+from tkinter import messagebox
+
+def atualizar_tempo(texto, janela, tempo_restante):
+    if tempo_restante > 0:
+        tempo_restante -= 1
+        texto.config(text=f"{tempo_restante:02d}")
+        
+        # Passamos os argumentos para a próxima execução do after
+        timer_id = janela.after(1000, atualizar_tempo, texto, janela, tempo_restante)
+        return timer_id, tempo_restante
+    else:
+        mostrar_aviso()
+        return None, 0
+
+def iniciar_timer(janela, timer_id):
+    if timer_id is not None:
+        janela.after_cancel(timer_id)
+
+def mostrar_aviso():
+    messagebox.showinfo("Aviso", "O tempo acabou!")
+    
+#def formatar_tempo(segundos):
+
+    # função para formatar 60 em 01:00
+
+    #minutos = segundos // 60
+    #segs = segundos % 60
+    #return f"{minutos:02d}:{segs:02d}"
