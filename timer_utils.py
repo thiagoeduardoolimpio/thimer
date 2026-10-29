@@ -17,7 +17,7 @@ def iniciar_timer(janela, timer_id):
         janela.after_cancel(timer_id)
 
 def mostrar_aviso():
-    messagebox.showinfo("Aviso", "O tempo acabou!")
+    messagebox.showinfo("Alerta:", "Timer chegou ao fim. Inicie outro foco")
     
 #def formatar_tempo(segundos):
 
