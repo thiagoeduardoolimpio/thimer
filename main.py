@@ -19,6 +19,13 @@ janela = tk.Tk()
 janela.title("Thimer :p")
 janela.geometry("180x160")
 
+# codigo da logo (teste)
+try:
+    icone = tk.PhotoImage(file="assets/icontemp.png")
+    janela.iconphoto(True, icone)
+except Exception as e:
+    print(f"Erro ao carregar o ícone: {e}")
+
 texto = tk.Label(janela, text="60", font=("Arial", 40))
 texto.pack(pady=20)
 
