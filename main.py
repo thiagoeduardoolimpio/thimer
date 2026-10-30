@@ -21,10 +21,11 @@ def iniciar():
     
     # Cancela o timer anterior se existir
     timer_utils.iniciar_timer(janela, timer_id)
-    
+    optionmenu.configure(state="disabled")
     tempo_restante = timer_utils.converterMinutos(tempoTimer_escolhido)
+
     # Inicia a contagem passando os parâmetros
-    timer_id, tempo_restante = timer_utils.atualizar_tempo(texto, janela, tempo_restante)
+    timer_id, tempo_restante = timer_utils.atualizar_tempo(texto, janela, tempo_restante, optionmenu)
 
 
 janela = tk.Tk()

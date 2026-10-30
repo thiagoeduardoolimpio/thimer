@@ -1,6 +1,6 @@
 from tkinter import messagebox
 
-def atualizar_tempo(texto, janela, tempo_restante):
+def atualizar_tempo(texto, janela, tempo_restante, optionmenu):
     if tempo_restante > 0:
         tempo_restante -= 1
         minutos = tempo_restante // 60
@@ -8,10 +8,11 @@ def atualizar_tempo(texto, janela, tempo_restante):
         texto.config(text=f"{minutos:02d}:{segundos:02d}")
         
         # Passamos os argumentos para a próxima execução do after
-        timer_id = janela.after(1000, atualizar_tempo, texto, janela, tempo_restante)
+        timer_id = janela.after(1000, atualizar_tempo, texto, janela, tempo_restante, optionmenu)
         return timer_id, tempo_restante
     else:
         mostrar_aviso()
+        optionmenu.configure(state="normal")
         return None, 0
 
 def iniciar_timer(janela, timer_id):
