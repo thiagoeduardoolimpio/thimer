@@ -14,7 +14,6 @@ def iniciar():
     # Inicia a contagem passando os parâmetros
     timer_id, tempo_restante = timer_utils.atualizar_tempo(texto, janela, tempo_restante)
 
-
 janela = tk.Tk()
 janela.title("Thimer :p")
 janela.geometry("180x160")
@@ -33,8 +32,3 @@ botao = tk.Button(janela, text="Inicio", command=iniciar)
 botao.pack()
 
 janela.mainloop()
-
-
-
-
-
