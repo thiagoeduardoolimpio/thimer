@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/preview.png" alt="Interface do Thimer" width="400">
+  <img src="assets/Preview.png" alt="Interface do Thimer" width="400">
 </p>
 
 <h2>Sobre o projeto</h2>
