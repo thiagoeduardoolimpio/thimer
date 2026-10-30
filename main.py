@@ -1,6 +1,11 @@
 import tkinter as tk
+from tkinter import ttk
 from tkinter import messagebox
+import customtkinter as ctk
 import timer_utils
+
+
+
 tempo_restante = 60
 timer_id = None
   
@@ -15,20 +20,29 @@ def iniciar():
     timer_id, tempo_restante = timer_utils.atualizar_tempo(texto, janela, tempo_restante)
 
 janela = tk.Tk()
-janela.title("Thimer :p")
-janela.geometry("180x160")
+janela.title("Hello user!   :p")
+janela.geometry("505x400")
 
-# codigo da logo (teste)
+# codigo da logo
 try:
     icone = tk.PhotoImage(file="assets/icontemp.png")
     janela.iconphoto(True, icone)
 except Exception as e:
     print(f"Erro ao carregar o ícone: {e}")
 
-texto = tk.Label(janela, text="60", font=("Arial", 40))
-texto.pack(pady=20)
+texto = tk.Label(janela, text="60", font=("Arial", 100))
+texto.pack(pady=40)
 
-botao = tk.Button(janela, text="Inicio", command=iniciar)
-botao.pack()
-
+botao = ctk.CTkButton(
+    janela,
+    text="Iniciar",
+    command=iniciar,
+# style
+    fg_color="gray",
+    text_color="black",
+    corner_radius=15,
+    width=120,
+    height=35        
+)
+botao.pack(pady=10)
 janela.mainloop()
