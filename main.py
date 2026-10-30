@@ -9,7 +9,7 @@ tempoTimer_escolhido = 0
 timer_id = None
 
 def optionmenu_callback(choice):
-    print("Escolha um tempo", choice)
+    print("minutos:", choice)
 
     global tempoTimer_escolhido 
     tempoTimer_escolhido = int(choice)
@@ -27,7 +27,6 @@ def iniciar():
     # Inicia a contagem passando os parâmetros
     timer_id, tempo_restante = timer_utils.atualizar_tempo(texto, janela, tempo_restante, optionmenu)
 
-
 janela = tk.Tk()
 janela.title("Hello user!   :p")
 janela.geometry("505x400")
@@ -39,22 +38,18 @@ try:
 except Exception as e:
     print(f"Erro ao carregar o ícone: {e}")
 
-
 texto = tk.Label(janela, text=tempoTimer_escolhido, font=("Arial", 100))
 
 texto.pack(pady=40)
 
 # menu de escolhas 
 optionmenu_var = ctk.StringVar(value="option 2")
-optionmenu = ctk.CTkOptionMenu(janela,values=["10", "15", "20", "25", "30", "35", "40", "45"],
-                                         command=optionmenu_callback
-                                         #variable=optionmenu_var
-                                         )
-
+optionmenu = ctk.CTkOptionMenu(janela,values=["0","1","2","10", "15", "20", "25", "30", "35", "40", "45"],
+    command=optionmenu_callback
+    #variable=optionmenu_var
+    )
 
 optionmenu.pack(pady=10)
-# criar funcoes de contagem especifica... 10, 15, 20, 25, 30, 40, 45 min
-
 
 botao = ctk.CTkButton(
     janela,
