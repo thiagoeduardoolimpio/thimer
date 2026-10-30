@@ -4,7 +4,7 @@ from tkinter import messagebox
 import customtkinter as ctk
 import timer_utils
 
-tempo_restante = 60 
+tempo_restante = 0 
 tempoTimer_escolhido = 0
 timer_id = None
 
@@ -22,7 +22,7 @@ def iniciar():
     # Cancela o timer anterior se existir
     timer_utils.iniciar_timer(janela, timer_id)
     
-    tempo_restante = tempoTimer_escolhido
+    tempo_restante = timer_utils.converterMinutos(tempoTimer_escolhido)
     # Inicia a contagem passando os parâmetros
     timer_id, tempo_restante = timer_utils.atualizar_tempo(texto, janela, tempo_restante)
 
