@@ -1,10 +1,10 @@
-from setuptools import setup
+from setuptools import setup # type: ignore
 
 APP = ['main.py']
 DATA_FILES = ['assets']
 OPTIONS = {
     'argv_emulation': True,
-    'includes': ['_math_integer'],  # <-- Adicione esta linha
+    'includes': ['_math_integer'], 
 }
 
 setup(
