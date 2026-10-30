@@ -1,4 +1,4 @@
-from tkinter import messagebox
+import subprocess
 
 def atualizar_tempo(texto, janela, tempo_restante, optionmenu):
     if tempo_restante > 0:
@@ -19,19 +19,14 @@ def iniciar_timer(janela, timer_id):
     if timer_id is not None:
         janela.after_cancel(timer_id)
 
-
 def converterMinutos(minutos):
     time = minutos * 60
     return time
     # depois eu passaria tipo assim pra imprimir o valor correto... -> print(f"{minutos}:{segundos}")
 
 def mostrar_aviso():
-    messagebox.showinfo("Alerta:", "Timer chegou ao fim. Inicie outro foco")
-    
-#def formatar_tempo(segundos):
-
-    # função para formatar 60 em 01:00
-
-    #minutos = segundos // 60
-    #segs = segundos % 60
-    #return f"{minutos:02d}:{segs:02d}"  
+    subprocess.run([
+        "osascript",
+        "-e",
+        'display notification "Seu tempo de foco chegou ao fim. Que tal uma pausa?" with title "Foco concluído"'
+    ])
