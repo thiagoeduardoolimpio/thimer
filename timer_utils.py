@@ -5,7 +5,7 @@ def atualizar_tempo(texto, janela, tempo_restante):
         tempo_restante -= 1
         minutos = tempo_restante // 60
         segundos = tempo_restante % 60
-        texto.config(text=f"{minutos}:{segundos}")
+        texto.config(text=f"{minutos:02d}:{segundos:02d}")
         
         # Passamos os argumentos para a próxima execução do after
         timer_id = janela.after(1000, atualizar_tempo, texto, janela, tempo_restante)
