@@ -4,20 +4,28 @@ from tkinter import messagebox
 import customtkinter as ctk
 import timer_utils
 
-
-
-tempo_restante = 60
+tempo_restante = 60 
+tempoTimer_escolhido = 0
 timer_id = None
-  
+
+def optionmenu_callback(choice):
+    print("Escolha um tempo", choice)
+
+    global tempoTimer_escolhido 
+    tempoTimer_escolhido = int(choice)
+    texto.config(text=choice)
+    return tempoTimer_escolhido
+
 def iniciar():
-    global tempo_restante, timer_id
+    global tempo_restante, timer_id, tempoTimer_escolhido
     
     # Cancela o timer anterior se existir
     timer_utils.iniciar_timer(janela, timer_id)
     
-    tempo_restante = 60
+    tempo_restante = tempoTimer_escolhido
     # Inicia a contagem passando os parâmetros
     timer_id, tempo_restante = timer_utils.atualizar_tempo(texto, janela, tempo_restante)
+
 
 janela = tk.Tk()
 janela.title("Hello user!   :p")
@@ -30,8 +38,22 @@ try:
 except Exception as e:
     print(f"Erro ao carregar o ícone: {e}")
 
-texto = tk.Label(janela, text="60", font=("Arial", 100))
+
+texto = tk.Label(janela, text=tempoTimer_escolhido, font=("Arial", 100))
+
 texto.pack(pady=40)
+
+# menu de escolhas 
+optionmenu_var = ctk.StringVar(value="option 2")
+optionmenu = ctk.CTkOptionMenu(janela,values=["10", "15", "20", "25", "30", "35", "40", "45"],
+                                         command=optionmenu_callback
+                                         #variable=optionmenu_var
+                                         )
+
+
+optionmenu.pack(pady=10)
+# criar funcoes de contagem especifica... 10, 15, 20, 25, 30, 40, 45 min
+
 
 botao = ctk.CTkButton(
     janela,

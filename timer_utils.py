@@ -25,4 +25,4 @@ def mostrar_aviso():
 
     #minutos = segundos // 60
     #segs = segundos % 60
-    #return f"{minutos:02d}:{segs:02d}"
+    #return f"{minutos:02d}:{segs:02d}"  
