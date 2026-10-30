@@ -11,11 +11,11 @@
 <h2>Sobre o projeto</h2>
 
 <p>
-  O projeto foi desenvolvido inteiramente por mim, utilizando Python e CustomTkinter.
+  O projeto foi desenvolvido inteiramente por mim, utilizando Python, Tkinter e CustomTkinter.
 </p>
 
 <p>
-  Ele surgiu depois que abri a App Store e percebi que até mesmo um simples timer custava R$ 5. Foi então que decidi desenvolver minha própria versão!
+  Ele surgiu depois que abri a App Store e percebi que um simples timer custava R$ 5. Foi então que decidi desenvolver minha própria versão.
 </p>
 
 <p>
