@@ -1,19 +1,22 @@
-# Thimer v1.0.0-beta
 
-## Sobre esta versão
+# Thimer — Release Notes
 
-Esta é a primeira versão beta do Thimer, disponibilizada para apresentar as funcionalidades do aplicativo e permitir sua utilização.
+## v1.0.0-beta
 
-## Compatibilidade
+### Sobre esta versão
+Primeira versão beta do Thimer, desenvolvida para apresentar o aplicativo e disponibilizar suas funcionalidades iniciais.
 
-**Sistemas operacionais testados:**
-- macOS (Apple Silicon).
+### Funcionalidades
+- Temporizador Pomodoro.
+- Seleção personalizada do tempo de foco.
+- Contagem regressiva no formato MM:SS.
+- Notificação nativa do macOS ao finalizar.
+- Painel Sobre integrado ao macOS.
 
-**Outras plataformas:**
-- Windows e Linux ainda não foram testados nesta versão.
+### Compatibilidade
+- macOS (Apple Silicon): testado.
+- Windows: ainda não testado.
+- Linux: ainda não testado.
 
-O suporte a essas plataformas poderá ser ampliado e validado nas próximas atualizações.
-
-## Observações
-
-Por se tratar de uma versão beta, novas melhorias e ajustes poderão ser implementados nas próximas versões.
+### Observações
+Esta é uma versão beta. Novas funcionalidades, melhorias e correções poderão ser implementadas nas próximas versões.
