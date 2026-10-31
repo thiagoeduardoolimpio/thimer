@@ -1,6 +1,8 @@
 # Pastas geradas pelo py2app
 build/
 dist/
+.eggs/
+
 
 # Ambiente virtual e cache do python
 .venv
@@ -8,3 +10,6 @@ __pycache__
 
 # Arquivos de sistema
 .DS_Store
+
+# Arquivos confidenciais 
+text.txt

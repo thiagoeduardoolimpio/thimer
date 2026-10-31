@@ -1,6 +1,6 @@
 from setuptools import setup
 
-APP = ['Thimer.py']
+APP = ['thimer.py']
 DATA_FILES = ['assets']
 
 OPTIONS = {
