@@ -1,10 +1,15 @@
-from setuptools import setup # type: ignore
+from setuptools import setup
 
-APP = ['main.py']
+APP = ['Thimer.py']
 DATA_FILES = ['assets']
+
 OPTIONS = {
-    'argv_emulation': True,
-    'includes': ['_math_integer'], 
+    'includes': ['_math_integer'],
+    'iconfile': 'assets/icon.icns',
+     'plist': {
+        'CFBundleName': 'Thimer',
+        'CFBundleDisplayName': 'Thimer',
+    },
 }
 
 setup(
