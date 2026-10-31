@@ -6,10 +6,12 @@ DATA_FILES = ['assets']
 OPTIONS = {
     'includes': ['_math_integer'],
     'iconfile': 'assets/icon.icns',
-     'plist': {
-        'CFBundleName': 'Thimer',
-        'CFBundleDisplayName': 'Thimer',
-    },
+    'plist': {
+    'CFBundleName': 'Thimer',
+    'CFBundleDisplayName': 'Thimer',
+    'CFBundleShortVersionString': '1.0.0-beta 1',
+    'NSHumanReadableCopyright': 'Copyright © 2026 Thiago Olímpio',
+},
 }
 
 setup(
